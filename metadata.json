@@ -1,0 +1,6 @@
+{
+  "name": "Kids Interactive Learning App",
+  "description": "A touch-friendly, voice-enabled interactive learning app for kids featuring Phonics & Letters, Number Safari, Shape & Color Matching, and Fun Quizzes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

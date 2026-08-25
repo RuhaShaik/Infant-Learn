@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgmask" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bgmask)"/>
+  <text x="256" y="285" font-size="200" text-anchor="middle" dominant-baseline="central">🚀</text>
+  <circle cx="370" cy="140" r="36" fill="#fbbf24"/>
+  <text x="370" y="144" font-size="36" text-anchor="middle" dominant-baseline="central">⭐</text>
+</svg>

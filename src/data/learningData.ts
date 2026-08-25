@@ -1,0 +1,131 @@
+import { AlphabetItem, NumberItem, ShapeItem, QuizQuestion } from '../types';
+
+export const ALPHABET_DATA: AlphabetItem[] = [
+  { letter: 'A', word: 'Apple', emoji: '🍎', phonics: 'ah', color: 'text-rose-600', bgLight: 'bg-rose-50 border-rose-200 hover:bg-rose-100', funFact: 'Apples float in water because 25% of their volume is air!' },
+  { letter: 'B', word: 'Butterfly', emoji: '🦋', phonics: 'buh', color: 'text-blue-600', bgLight: 'bg-blue-50 border-blue-200 hover:bg-blue-100', funFact: 'Butterflies taste their food with their feet!' },
+  { letter: 'C', word: 'Cat', emoji: '🐱', phonics: 'kuh', color: 'text-amber-600', bgLight: 'bg-amber-50 border-amber-200 hover:bg-amber-100', funFact: 'Cats can jump up to 6 times their height!' },
+  { letter: 'D', word: 'Dolphin', emoji: '🐬', phonics: 'duh', color: 'text-sky-600', bgLight: 'bg-sky-50 border-sky-200 hover:bg-sky-100', funFact: 'Dolphins sleep with one eye open!' },
+  { letter: 'E', word: 'Elephant', emoji: '🐘', phonics: 'eh', color: 'text-emerald-600', bgLight: 'bg-emerald-50 border-emerald-200 hover:bg-emerald-100', funFact: 'Elephants have great memories and love water!' },
+  { letter: 'F', word: 'Frog', emoji: '🐸', phonics: 'fuh', color: 'text-lime-600', bgLight: 'bg-lime-50 border-lime-200 hover:bg-lime-100', funFact: 'Frogs drink water through their skin!' },
+  { letter: 'G', word: 'Giraffe', emoji: '🦒', phonics: 'juh', color: 'text-yellow-600', bgLight: 'bg-yellow-50 border-yellow-200 hover:bg-yellow-100', funFact: 'Giraffes have blue-purple tongues that are 18 inches long!' },
+  { letter: 'H', word: 'Honeybee', emoji: '🐝', phonics: 'huh', color: 'text-amber-600', bgLight: 'bg-amber-50 border-amber-200 hover:bg-amber-100', funFact: 'Bees do a waggle dance to talk to their friends!' },
+  { letter: 'I', word: 'Igloo', emoji: '❄️', phonics: 'ih', color: 'text-cyan-600', bgLight: 'bg-cyan-50 border-cyan-200 hover:bg-cyan-100', funFact: 'Igloos trap body heat to stay warm inside!' },
+  { letter: 'J', word: 'Jellyfish', emoji: '🪼', phonics: 'juh', color: 'text-purple-600', bgLight: 'bg-purple-50 border-purple-200 hover:bg-purple-100', funFact: 'Jellyfish have been around for more than 500 million years!' },
+  { letter: 'K', word: 'Koala', emoji: '🐨', phonics: 'kuh', color: 'text-teal-600', bgLight: 'bg-teal-50 border-teal-200 hover:bg-teal-100', funFact: 'Koalas sleep for up to 20 hours a day!' },
+  { letter: 'L', word: 'Lion', emoji: '🦁', phonics: 'luh', color: 'text-orange-600', bgLight: 'bg-orange-50 border-orange-200 hover:bg-orange-100', funFact: 'A lion roar can be heard 5 miles away!' },
+  { letter: 'M', word: 'Monkey', emoji: '🐵', phonics: 'muh', color: 'text-amber-700', bgLight: 'bg-amber-50 border-amber-200 hover:bg-amber-100', funFact: 'Monkeys love peeling bananas from the bottom up!' },
+  { letter: 'N', word: 'Nest', emoji: '🪺', phonics: 'nuh', color: 'text-stone-600', bgLight: 'bg-stone-50 border-stone-200 hover:bg-stone-100', funFact: 'Birds build cozy nests using twigs and soft feathers!' },
+  { letter: 'O', word: 'Owl', emoji: '🦉', phonics: 'awe', color: 'text-indigo-600', bgLight: 'bg-indigo-50 border-indigo-200 hover:bg-indigo-100', funFact: 'Owls can turn their heads almost all the way around!' },
+  { letter: 'P', word: 'Penguin', emoji: '🐧', phonics: 'puh', color: 'text-blue-700', bgLight: 'bg-blue-50 border-blue-200 hover:bg-blue-100', funFact: 'Penguins are amazing swimmers and love ice slides!' },
+  { letter: 'Q', word: 'Queen Bee', emoji: '👑', phonics: 'kwuh', color: 'text-yellow-600', bgLight: 'bg-yellow-50 border-yellow-200 hover:bg-yellow-100', funFact: 'The Queen bee leads the whole beehive colony!' },
+  { letter: 'R', word: 'Rainbow', emoji: '🌈', phonics: 'ruh', color: 'text-rose-500', bgLight: 'bg-rose-50 border-rose-200 hover:bg-rose-100', funFact: 'Rainbows appear when sunlight shines through raindrops!' },
+  { letter: 'S', word: 'Sun', emoji: '☀️', phonics: 'suh', color: 'text-amber-500', bgLight: 'bg-amber-50 border-amber-200 hover:bg-amber-100', funFact: 'The sun is a giant friendly star in the center of our solar system!' },
+  { letter: 'T', word: 'Tiger', emoji: '🐯', phonics: 'tuh', color: 'text-orange-600', bgLight: 'bg-orange-50 border-orange-200 hover:bg-orange-100', funFact: 'Every tiger has a completely unique stripe pattern!' },
+  { letter: 'U', word: 'Umbrella', emoji: '☂️', phonics: 'uh', color: 'text-violet-600', bgLight: 'bg-violet-50 border-violet-200 hover:bg-violet-100', funFact: 'Umbrellas keep us dry on splashy rainy days!' },
+  { letter: 'V', word: 'Violin', emoji: '🎻', phonics: 'vuh', color: 'text-amber-700', bgLight: 'bg-amber-50 border-amber-200 hover:bg-amber-100', funFact: 'Violins make beautiful musical tunes with their wooden strings!' },
+  { letter: 'W', word: 'Whale', emoji: '🐋', phonics: 'wuh', color: 'text-cyan-700', bgLight: 'bg-cyan-50 border-cyan-200 hover:bg-cyan-100', funFact: 'The Blue Whale is the biggest creature on Earth!' },
+  { letter: 'X', word: 'Xylophone', emoji: '🎵', phonics: 'zuh', color: 'text-pink-600', bgLight: 'bg-pink-50 border-pink-200 hover:bg-pink-100', funFact: 'Xylophone bars make chime notes from low to high!' },
+  { letter: 'Y', word: 'Yacht', emoji: '⛵', phonics: 'yuh', color: 'text-sky-600', bgLight: 'bg-sky-50 border-sky-200 hover:bg-sky-100', funFact: 'Yachts catch gentle sea breezes to sail across the ocean!' },
+  { letter: 'Z', word: 'Zebra', emoji: '🦓', phonics: 'zuh', color: 'text-slate-700', bgLight: 'bg-slate-50 border-slate-200 hover:bg-slate-100', funFact: 'Zebras run together in herds to stay safe and happy!' },
+];
+
+export const NUMBERS_DATA: NumberItem[] = [
+  { num: 1, word: 'One', emoji: '🚀', color: 'bg-rose-500' },
+  { num: 2, word: 'Two', emoji: '🐥', color: 'bg-amber-500' },
+  { num: 3, word: 'Three', emoji: '🎈', color: 'bg-emerald-500' },
+  { num: 4, word: 'Four', emoji: '⭐', color: 'bg-sky-500' },
+  { num: 5, word: 'Five', emoji: '🍎', color: 'bg-rose-600' },
+  { num: 6, word: 'Six', emoji: '🌸', color: 'bg-pink-500' },
+  { num: 7, word: 'Seven', emoji: '🐠', color: 'bg-teal-500' },
+  { num: 8, word: 'Eight', emoji: '🍓', color: 'bg-red-500' },
+  { num: 9, word: 'Nine', emoji: '🚗', color: 'bg-blue-600' },
+  { num: 10, word: 'Ten', emoji: '🏆', color: 'bg-yellow-500' },
+  { num: 11, word: 'Eleven', emoji: '🦄', color: 'bg-purple-500' },
+  { num: 12, word: 'Twelve', emoji: '🍩', color: 'bg-orange-500' },
+  { num: 13, word: 'Thirteen', emoji: '🍕', color: 'bg-amber-600' },
+  { num: 14, word: 'Fourteen', emoji: '⚽', color: 'bg-slate-600' },
+  { num: 15, word: 'Fifteen', emoji: '🍪', color: 'bg-amber-700' },
+  { num: 16, word: 'Sixteen', emoji: '🍦', color: 'bg-pink-400' },
+  { num: 17, word: 'Seventeen', emoji: '🦁', color: 'bg-orange-600' },
+  { num: 18, word: 'Eighteen', emoji: '🎸', color: 'bg-indigo-500' },
+  { num: 19, word: 'Nineteen', emoji: '🚀', color: 'bg-violet-600' },
+  { num: 20, word: 'Twenty', emoji: '🌟', color: 'bg-amber-400' },
+];
+
+export const SHAPES_DATA: ShapeItem[] = [
+  { id: 'circle-red', name: 'Red Circle', colorName: 'Red', colorHex: '#ef4444', emoji: '🔴', shapeType: 'circle' },
+  { id: 'square-blue', name: 'Blue Square', colorName: 'Blue', colorHex: '#3b82f6', emoji: '🟦', shapeType: 'square' },
+  { id: 'triangle-yellow', name: 'Yellow Triangle', colorName: 'Yellow', colorHex: '#eab308', emoji: '🔺', shapeType: 'triangle' },
+  { id: 'star-purple', name: 'Purple Star', colorName: 'Purple', colorHex: '#a855f7', emoji: '⭐', shapeType: 'star' },
+  { id: 'heart-pink', name: 'Pink Heart', colorName: 'Pink', colorHex: '#ec4899', emoji: '💖', shapeType: 'heart' },
+  { id: 'diamond-green', name: 'Green Diamond', colorName: 'Green', colorHex: '#10b981', emoji: '🔷', shapeType: 'diamond' },
+];
+
+export const QUIZ_QUESTIONS: QuizQuestion[] = [
+  {
+    id: 1,
+    question: 'Which animal says "Roar" and starts with T?',
+    spokenPrompt: 'Which animal says Roar and starts with T?',
+    emoji: '🐾',
+    options: [
+      { id: 'a', text: 'Tiger', emoji: '🐯', isCorrect: true },
+      { id: 'b', text: 'Penguin', emoji: '🐧', isCorrect: false },
+      { id: 'c', text: 'Frog', emoji: '🐸', isCorrect: false },
+    ],
+  },
+  {
+    id: 2,
+    question: 'Count the balloons: 🎈 🎈 🎈. How many are there?',
+    spokenPrompt: 'How many balloons do you see here?',
+    emoji: '🎈',
+    options: [
+      { id: 'a', text: '2 (Two)', emoji: '✌️', isCorrect: false },
+      { id: 'b', text: '3 (Three)', emoji: '3️⃣', isCorrect: true },
+      { id: 'c', text: '5 (Five)', emoji: '🖐️', isCorrect: false },
+    ],
+  },
+  {
+    id: 3,
+    question: 'What color is a ripe sweet strawberry?',
+    spokenPrompt: 'What color is a ripe sweet strawberry?',
+    emoji: '🍓',
+    options: [
+      { id: 'a', text: 'Blue', emoji: '🟦', isCorrect: false },
+      { id: 'b', text: 'Red', emoji: '🔴', isCorrect: true },
+      { id: 'c', text: 'Green', emoji: '🟩', isCorrect: false },
+    ],
+  },
+  {
+    id: 4,
+    question: 'Which letter does "Apple" start with?',
+    spokenPrompt: 'Which letter does Apple start with?',
+    emoji: '🍎',
+    options: [
+      { id: 'a', text: 'Letter A', emoji: '🅰️', isCorrect: true },
+      { id: 'b', text: 'Letter B', emoji: '🅱️', isCorrect: false },
+      { id: 'c', text: 'Letter Z', emoji: '💤', isCorrect: false },
+    ],
+  },
+  {
+    id: 5,
+    question: 'Which shape has 3 pointy corners?',
+    spokenPrompt: 'Which shape has 3 pointy corners?',
+    emoji: '📐',
+    options: [
+      { id: 'a', text: 'Circle', emoji: '⭕', isCorrect: false },
+      { id: 'b', text: 'Triangle', emoji: '🔺', isCorrect: true },
+      { id: 'c', text: 'Square', emoji: '⬛', isCorrect: false },
+    ],
+  },
+  {
+    id: 6,
+    question: 'What do honeybees make in their hive?',
+    spokenPrompt: 'What do honeybees make in their hive?',
+    emoji: '🐝',
+    options: [
+      { id: 'a', text: 'Sweet Honey', emoji: '🍯', isCorrect: true },
+      { id: 'b', text: 'Ice Cream', emoji: '🍦', isCorrect: false },
+      { id: 'c', text: 'Pizza', emoji: '🍕', isCorrect: false },
+    ],
+  },
+];
