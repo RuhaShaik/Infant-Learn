@@ -9,10 +9,12 @@ createRoot(document.getElementById('root')!).render(
   </StrictMode>,
 );
 
-if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(err => {
-      console.debug('ServiceWorker registration skipped:', err);
+    navigator.serviceWorker.register('/sw.js').then((reg) => {
+      console.log('KiddoLearn ServiceWorker active:', reg.scope);
+    }).catch(err => {
+      console.debug('ServiceWorker registration error:', err);
     });
   });
 }

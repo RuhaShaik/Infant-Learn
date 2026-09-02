@@ -1,4 +1,4 @@
-// KiddoLearn PWA & APK Offline Service Worker
+// KiddoLearn PWABuilder Service Worker
 const CACHE_NAME = 'kiddolearn-cache-v2';
 const PRECACHE_ASSETS = [
   '/',
@@ -31,13 +31,11 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  // Only handle GET requests
   if (event.request.method !== 'GET') return;
 
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) {
-        // Return cached, but also update in background
         fetch(event.request).then((networkResponse) => {
           if (networkResponse && networkResponse.status === 200) {
             caches.open(CACHE_NAME).then((cache) => cache.put(event.request, networkResponse));
@@ -56,7 +54,6 @@ self.addEventListener('fetch', (event) => {
         });
         return networkResponse;
       }).catch(() => {
-        // Fallback to cached index for navigation
         if (event.request.mode === 'navigate') {
           return caches.match('/');
         }

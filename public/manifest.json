@@ -3,15 +3,152 @@
   "short_name": "KiddoLearn",
   "description": "An interactive touch and voice learning app for kids featuring ABC Phonics, 123 Number Safari, Shapes, Colors, Magic Canvas, and Star Quizzes.",
   "start_url": "/",
+  "scope": "/",
   "id": "/",
   "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
   "orientation": "any",
   "background_color": "#faf8f5",
   "theme_color": "#f59e0b",
   "lang": "en",
   "dir": "ltr",
   "categories": ["education", "kids", "entertainment"],
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
+  "launch_handler": {
+    "client_mode": "auto"
+  },
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "note_taking": {
+    "new_note_url": "/?tab=canvas"
+  },
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.kiddolearn.app",
+      "id": "com.kiddolearn.app"
+    }
+  ],
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+kiddo",
+      "url": "/?lesson=%s"
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "/",
+      "name": "Kiddo Drawings",
+      "accept": {
+        "image/png": [".png"],
+        "image/jpeg": [".jpg", ".jpeg"]
+      }
+    }
+  ],
+  "scope_extensions": [
+    {
+      "origin": "https://ais-pre-t77snoo2kkrxa55vk6lwr3-292481320277.asia-southeast1.run.app"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "ABC Phonics",
+      "short_name": "Phonics",
+      "description": "Interactive alphabet and phonics sounds",
+      "url": "/?tab=abc",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "123 Number Safari",
+      "short_name": "Numbers",
+      "description": "Counting and math games",
+      "url": "/?tab=numbers",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Magic Canvas",
+      "short_name": "Draw",
+      "description": "Colorful canvas for doodling",
+      "url": "/?tab=canvas",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "widgets": [
+    {
+      "name": "Daily Phonics Word",
+      "description": "Today's learning letter and word",
+      "tag": "daily-word",
+      "template": "widget-template",
+      "ms_ac_template": "widget-template.json",
+      "data": "widget-data.json",
+      "type": "application/json",
+      "screenshots": [
+        {
+          "src": "/screenshot-mobile.png",
+          "sizes": "540x960",
+          "label": "Daily Word Widget"
+        }
+      ],
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
   "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
     {
       "src": "/icon-192.svg",
       "sizes": "192x192",
@@ -23,12 +160,22 @@
       "sizes": "512x512",
       "type": "image/svg+xml",
       "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "540x960",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "KiddoLearn ABC Phonics and Voice Lessons"
     },
     {
-      "src": "/icon-maskable.svg",
-      "sizes": "512x512",
-      "type": "image/svg+xml",
-      "purpose": "maskable"
+      "src": "/screenshot-wide.png",
+      "sizes": "1024x576",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "KiddoLearn Interactive Dashboard"
     }
   ]
 }

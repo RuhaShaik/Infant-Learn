@@ -11,8 +11,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="KiddoLearn" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
     <link rel="icon" type="image/svg+xml" href="/icon-192.svg" />
-    <link rel="apple-touch-icon" href="/icon-192.svg" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
     <meta property="og:title" content="KiddoLearn - Kids Interactive Learning App" />
     <meta property="og:description" content="An interactive touch and voice learning app for kids featuring ABC Phonics, 123 Number Safari, Shapes, Colors, Magic Canvas, and Star Quizzes." />
     <meta property="og:type" content="website" />
@@ -21,6 +22,19 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/pwabuilder-sw.js', { scope: '/' })
+            .then(function(reg) {
+              console.log('ServiceWorker registered:', reg.scope);
+            })
+            .catch(function() {
+              navigator.serviceWorker.register('/sw.js', { scope: '/' });
+            });
+        });
+      }
+    </script>
   </body>
 </html>
 
